@@ -5,16 +5,18 @@
   "developer_name": "Yehonathan Peretz",
   "icon": "images/icon.png",
   "options": {
-    "query_debounce": 0.1
+    "query_debounce": 0.01
   },
   "preferences": [
-    { "id": "main_kw",
+    {
+      "id": "main_kw",
       "type": "keyword",
       "name": "All",
       "description": "View Upcoming events",
       "default_value": "me"
     },
-    { "id": "kw_events",
+    {
+      "id": "kw_events",
       "type": "keyword",
       "name": "Moodle Upcoming events",
       "description": "View Upcoming events",
@@ -44,10 +46,36 @@
     {
       "id": "courses_type",
       "type": "select",
-      "options": ["Starred","All in-progress"],
+      "options": [
+        "Starred",
+        "All in-progress"
+      ],
       "name": "Type of courses to view",
       "default_value": "All in-progress"
+    },
+    {
+      "id": "course_status",
+      "type": "select",
+      "options": [
+        {
+          "text": "All",
+          "value": "all"
+        },
+        {
+          "text": "Past",
+          "value": "past"
+        },
+        {
+          "text": "In Progress",
+          "value": "inprogress"
+        },
+        {
+          "text": "Future",
+          "value": "future"
+        }
+      ],
+      "name": "Status of courses to view",
+      "default_value": "inprogress"
     }
   ]
 }
-
